@@ -9,6 +9,8 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
       t.references :position, null: false, foreign_key: true
       t.text :scouting_report
       t.text :testing_results
+      t.string :avatar
+      t.integer :ranking
 
       t.timestamps
     end

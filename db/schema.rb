@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_13_143547) do
+ActiveRecord::Schema.define(version: 2019_12_04_152447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.bigint "player_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_comments_on_player_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "name"
@@ -24,6 +34,8 @@ ActiveRecord::Schema.define(version: 2019_11_13_143547) do
     t.bigint "position_id", null: false
     t.text "scouting_report"
     t.text "testing_results"
+    t.string "avatar"
+    t.integer "ranking"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["position_id"], name: "index_players_on_position_id"
@@ -33,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_143547) do
 
   create_table "positions", force: :cascade do |t|
     t.string "name"
+    t.string "side"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -64,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_11_13_143547) do
 
   create_table "watchlists", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_watchlists_on_user_id"
@@ -75,6 +89,8 @@ ActiveRecord::Schema.define(version: 2019_11_13_143547) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "players"
+  add_foreign_key "comments", "users"
   add_foreign_key "players", "positions"
   add_foreign_key "players", "schools"
   add_foreign_key "players", "years"

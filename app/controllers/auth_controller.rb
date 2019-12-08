@@ -1,10 +1,12 @@
 class AuthController < ApplicationController
 
+# Update to run the Serializer explicitely when logged in. (Line 9)
   def login
       user = User.find_by(username: login_params[:username])
+      # byebug
       if user && user.authenticate(login_params[:password])
            token = JWT.encode({user_id: user.id}, secret, 'HS256')
-          render json: {user: user, token: token}
+          render json: {user: UserSerializer.new(user), token: token}
       else
           render json: {errors: user.errors.full_messages}
       end

@@ -20,6 +20,10 @@ class PlayersController < ApplicationController
     render json: player
   end
 
+  # def player_position
+  #   player = Player.where(id: params[:id])
+  # end
+
 
 
 
