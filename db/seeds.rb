@@ -134,7 +134,7 @@ ss = Position.create(name: 'SS', side: 'defense')
 p = Position.create(name: 'P', side: 'defense')
 k = Position.create(name: 'K', side: 'offense')
 
-ronald = User.create(username: 'ronald', password: '1234', scout: false ,avatar: 'https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjeg5OizYrmAhVqiOAKHawtBPIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.popsugar.com%2Fentertainment%2Fphoto-gallery%2F44990677%2Fimage%2F44990690%2FNick-Offerman-Ron-Swanson&psig=AOvVaw0vavy4xJ1JKU8lMz550-wY&ust=1574951382091814')
+ronald = User.create(username: 'ronald', password: '1234', scout: false ,avatar: 'https://www.profootballweekly.com/_internal/cimg!0/a9mder2xkk1268x4u0i7h2optwf3n63')
 
 ronaldlist = Watchlist.create(user_id: 1, name: 'Ronald Watchlist')
 
