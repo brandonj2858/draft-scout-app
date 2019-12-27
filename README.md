@@ -1,9 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Clone the repository
 
-Things you may want to cover:
+## In your terminal run 'bundle install'
+
+## Then start your server by running 'rails s' or 'rails server'
 
 * Ruby version
 
