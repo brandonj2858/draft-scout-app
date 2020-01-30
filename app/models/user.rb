@@ -3,4 +3,5 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   has_many :watchlists
   has_many :watchlist_players, through: :watchlists
+  
 end
