@@ -146,13 +146,16 @@ ronaldlist = Watchlist.create(user_id: 1, name: 'Ronald Watchlist')
 #JR
 Player.create(avatar: 'https://usatrolltidewire.files.wordpress.com/2019/11/tua-tagovailoa-john-david-mercer-usa-today-sports.jpg?w=1000&h=600&crop=1', name: 'Tua Tagovailoa', height: '6-0', weight: 208, school: bama, year:jr, position: qb, scouting_report: 'All around good player', ranking: 1)
 
-Player.create(avatar: '', name: 'Jake Fromm', height: '6-2', weight: 220, school: uga, year: jr, position: qb, scouting_report: '', ranking: 2)
+Player.create(avatar: '', name: 'Jake Fromm', height: '6-2', weight: 220, school: uga, year: jr, position: qb, scouting_report: '', ranking: 99)
 
 Player.create(avatar: '', name: 'Jacob Eason', height: '6-5', weight: 227, school: was, year: rsjr, position: qb, scouting_report: '', ranking: 3)
 
 Player.create(avatar: '', name: 'Jamie Newman', height: '6-3', weight: 230, school: wf, year: rsjr, position: qb, scouting_report: '', ranking: 4)
 
 Player.create(avatar: '', name: 'Kellen Mond', height: '6-2', weight: 217, school: tamu, year: jr, position: qb, scouting_report: '', ranking: 5)
+
+Player.create(avatar: '', name: 'Sam Ehlinger', height: '6-3', weight: 229, school: tex, year: jr, position: qb, scouting_report: 'Not the very accurate but he`ll put the ball in the receivers vicinity. Hits his checkdowns well, overall makes pretty good decisions. Big strong quarterback, Good all around athlete. Tough QB fights for every yard.' ranking: 5)
+
 
 
 #SR
@@ -440,7 +443,7 @@ Player.create(avatar: '', name: 'Terrell Burgess', height: '6-0', weight: 198, s
 # JR's
 Player.create(avatar: '', name: 'Grant Delpit', height: '6-2', weight: 203, school: lsu, year: jr, position: ss, scouting_report: '', ranking: 1)
 
-Player.create(avatar: '', name: 'JaCoby Stevens', height: '6-1', weight: 228, school: lsu, year: jr, position: ss, scouting_report: '', ranking: 2)
+Player.create(avatar: '', name: 'JaCoby Stevens', height: '6-1', weight: 228, school: lsu, year: jr, position: ss, scouting_report: 'physical safety no issues playing in the box. Uses his hands to shed blocks really well for a db. Keeps contain well not an easy matchup for tight-ends in the run game. Sometimes has lapses in focus causing him to make mistakes leading to missed tackles and penalties.', ranking: 2)
 
 
 cment = Comment.create(user: ronald, player: bur, content: 'This Guy Stinks!')
